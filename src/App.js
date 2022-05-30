@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import axios from "axios";
+import React, { useContext, useEffect } from "react";
 
+import "./App.css";
+import Card from "./components/Card";
+import DropDown from "./components/DropDown";
+import Context from "./context/Context";
 function App() {
+  const ctx = useContext(Context);
+  const {city, setWeather, weather} = ctx[0]
+   const api_key = "71299899d2c0b3e4e109ff823a3f6c1d"
+   console.log(city.name)
+  useEffect(() => {
+  const getWeather = () => {
+   
+    axios(`https://api.openweathermap.org/data/2.5/onecall?lat=${city.latitude}&lon=${city.longitude}&exclude={current,minutely,hourly}&appid=${api_key}`)
+    .then((res) => setWeather(res.data.daily))
+  }
+  getWeather()
+  
+  },[city,setWeather])
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DropDown />
+     { weather.map(item => <Card  item={item} />)}
     </div>
   );
 }
