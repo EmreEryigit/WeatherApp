@@ -5,7 +5,6 @@ Weather App with React Components using https://openweathermap.org/ API
 
 
 
-https://user-images.githubusercontent.com/103842103/171952355-1a808a9d-7300-418b-96af-50ad6da5b21b.mov
 
 
 
