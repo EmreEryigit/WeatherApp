@@ -1,7 +1,6 @@
 Weather App with React Components using https://openweathermap.org/ API
 
-
-(./public/Ekran Resmi 2022-05-30 20.41.02.png)
+![plot](./public/Ekran Resmi 2022-05-30 20.41.02.png)
 
 
 
