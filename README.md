@@ -1,6 +1,7 @@
 Weather App with React Components using https://openweathermap.org/ API
 
-![plot](./public/Ekran Resmi 2022-05-30 20.41.02.png)
+
+<img width="1440" alt="Ekran Resmi 2022-05-30 20 41 02" src="https://user-images.githubusercontent.com/103842103/171951795-78f57458-a304-4f82-8c38-d97f75e40af1.png">
 
 
 
